@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Homework#3</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('li.prod').children().hide();
+            $('li.prod').each(function() {
+                        var selected = false;
+                        $(this).click(function(event){
+                            if (this == event.target) {
+                                if(!selected) {
+                                    $(this).children().show(200);
+                                    selected = true;
+                                }
+                                else
+                                {
+                                    $(this).children().hide();
+                                    selected = false;
+                                }
+                            }
+                        });
+                    }
+            );
+        });
+
+    </script>
+</head>
+<body>
+
+<ul>
+    <li class="prod">Овощи
+        <ul>
+            <li>Помидорi</li>
+            <li>Огурцi</li>
+        </ul>
+    </li>
+    <li class="prod">Мясо
+        <ul>
+            <li>Курiца</li>
+            <li>Мiiiiiша</li>
+            <li>Крiiiiiса</li>
+        </ul>
+    </li>
+    <li class="prod">Рiiiба
+        <ul>
+            <li>Рiба моя</li>
+            <li>Рiба твоя</li>
+            <li>Рiба мамина</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
